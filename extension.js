@@ -6,7 +6,7 @@ let terminalStack = [];
 
 function generateItem(context, name, command) {
     let title = name.replace("task-", "").replace("-", " ").toUpperCase()
-    let key = "task." + name;
+    let key = "button.task." + name;
 
     vscode.commands.registerCommand(key, () => {
         if (!terminalStack[title]) {
@@ -33,14 +33,18 @@ function generateTask(context) {
         let text = document.getText();
         let packageJson = JSON.parse(text);
         let scripts = packageJson.scripts
-        for (var x in scripts) {
-            if (x.startsWith("task-"))
-                generateItem(context, x, scripts[x])
+
+        if (scripts) {
+            for (var x in scripts) {
+                if (x.toString().length && x.startsWith("task-")) {
+                    generateItem(context, x, scripts[x])
+                }
+            }
         }
     });
 
-    vscode.window.onDidCloseTerminal((item)=>{
-        if(terminalStack[item._name])
+    vscode.window.onDidCloseTerminal((item) => {
+        if (terminalStack[item._name])
             delete terminalStack[item._name];
     })
 
