@@ -1,8 +1,8 @@
 {
     "name": "task-button",
     "displayName": "task-button",
-    "description": "",
-    "version": "0.0.1",
+    "description": "Task runner with script package.json",
+    "version": "0.0.2",
     "publisher": "zucska",
     "keywords": [
         "task",
