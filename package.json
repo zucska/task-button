@@ -2,7 +2,7 @@
     "name": "task-button",
     "displayName": "task-button",
     "description": "Task runner with script package.json",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "zucska",
     "keywords": [
         "task",
