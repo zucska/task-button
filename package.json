@@ -1,15 +1,25 @@
 {
-    "name": "task-button-node",
-    "displayName": "task-button-node",
+    "name": "task-button",
+    "displayName": "task-button",
     "description": "",
     "version": "0.0.1",
     "publisher": "zucska",
+    "keywords": [
+        "task",
+        "runner",
+        "actions"
+    ],
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
         "Other"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zucska/task-button"
+    },
+    "homepage": "https://github.com/zucska/task-button",
     "activationEvents": [
         "*"
     ],
